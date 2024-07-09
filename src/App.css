@@ -1,38 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Increased shadow spread */
+  padding-bottom: 10px;/* Adjusted box shadow for a more natural look */
+}
+
+.copyright {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.right a {
+  font-size: 16px;
+}
+.navigation a:hover,
+.navigation button:hover {
+  color: #ffffff; /* Ganti dengan warna yang diinginkan saat hover */
+}
+
+.navigation {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation .left {
+  display: flex;
+  align-items: center;
+}
+
+.navigation .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+}
+
+.navigation a:hover {
+  color: black;
+}
+
+.process-button {
+  border: 2px solid #D6BD62;
+  color: #D6BD62;
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.process-button:hover {
+  background-color: #D6BD62;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App-content {
+  margin-top: 20px;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header-content,
+.landingpage-image {
+  animation: slideIn 2s forwards; /* Menjalankan animasi slideIn selama 2 detik */
+}
+
+.content-header {
+  text-align: left;
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.title,
+.description,
+.info-button,
+.landingpage-image {
+  animation-delay: 0.5s;
+}
+
+.landingpage-image {
+  width: 619px;
+  height: 403px;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.description {
+  margin-top: 0;
+  color: #000000;
+  margin-top: -100px;
+}
+
+.info-button {
+  background-color: #d6bd62;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(251, 220, 58, 0.35);
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.info-button:hover {
+  background-color: #c4ab57;
+}
+
+@keyframes slideInHeader {
+  0% {
+    transform: translateX(-100%) translateY(0);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
   }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.App-main {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.App-footer {
+  padding: 20px;
+  background-color: #f1f1f1;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(0.90turn, #575826 46%, #000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.custom-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.custom-list li {
+  color: black;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-size: 14px; /* Set font size to 14px */
+  text-align: left;
+}
+
+.custom-list li::before {
+  content: '✔';
+  color: green;
+  position: absolute;
+  left: 0;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-size: 18px; /* Set font size to 18px */
+  text-align: center; /* Center align h2 headings */
+}
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+.bg-container {
+  transition: transform 0.3s ease-in-out;
+}
+
+.bg-container.hovered {
+  transform: translateY(-20px); /* Menggeser konten ke atas 20px saat dihover */
+}
+.group-icon {
+  height: 30px; /* Atur tinggi ikon sesuai kebutuhan Anda */
+  margin-right: 10px; /* Tambahkan jarak antara ikon dan teks */
+  vertical-align: middle; /* Vertikal sejajarkan ikon dengan teks */
+  position: relative; /* Menambahkan posisi relatif untuk penyesuaian */
+  top: -8px; /* Sesuaikan nilai ini agar ikon pas di atas huruf "M" */
+}
+
+.hover-img {
+  transition: transform 0.5s ease;
+}
+
+.hover-img:hover {
+  transform: translateY(-30px); /* Geser ke atas sebesar 20px */
+}
+
+.button {
+  border: 2px solid #D6BD62;
+  color: #D6BD62;
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #D6BD62;
+  color: white;
 }

@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Tentang from './Tentang';
+import Data from './Data'
+import Biodata from './Biodata';
+import DosenBiodata from './DosenBiodata';
+import DataTesting from './DataTesting';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
